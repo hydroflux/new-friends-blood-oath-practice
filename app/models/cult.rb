@@ -50,4 +50,21 @@ class Cult
             ages += follower.age.to_f
         end/ followers.count.to_f
     end
+
+    # ALTERNATE SOLUTION 
+    # def average_age
+    #     # cult_oaths = self.all_oaths
+    #     # followers_ages = cults_oaths.map {|oath| oath.follower}.map {|follower| follower.age}
+    #     # sum_ages = followers_ages.reduce(0) do |sum, age|
+    #     #     sum + age.to_f
+    #     # end
+    #     # sum_ages / self.cult_population
+    # end
+
+    def my_followers_mottos
+        #without followers helper method, the code would include the commented out lines below:
+        # cult_oaths = self.all_oaths
+        # followers = cult_oaths.map {|oath| oath.follower}
+        followers.map {|follower| follower.life_motto}
+    end
 end
