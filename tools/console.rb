@@ -4,8 +4,6 @@ def reload
   load 'config/environment.rb'
 end
 
-binding.pry
-
 # cult seeds 
 cromulons = Cult.new('Cromulons', 'Cygnus-5', 2015, 'Get Schwifty')
 jonestown = Cult.new('Jonestown', 'Indianapolis', 1950, 'We drink the koolaid')
@@ -33,5 +31,6 @@ oath7 = Bloodoath.new(heavensgate, ed, '1988/11/1')
 oath8 = Bloodoath.new(solartemple, joseph, '1989/12/1')
 oath8 = Bloodoath.new(solartemple, ted, '1990/4/1')
 oath8 = Bloodoath.new(solartemple, ed, '1994/3/2')
+binding.pry
 
 puts "Mwahahaha!" # just in case pry is buggy and exits
